@@ -1,0 +1,33 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname racket) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
+;ESTO ES UN COMENTARIO...
+
+;Para un string:
+"HOLA"
+
+;Para concatenar strings:
+(string-append "HOLA" " MUNDO")
+
+;Para contar la longitud del string:
+"El largo es de: " (string-length (string-append "HOLA" " YO"))
+
+;SUMA:
+"La suma de 2 más 3, dá: " (+ 2 3)
+
+;RESTA:
+"La resta de 3 menos 2, dá: " (- 3 2)
+
+;DIVISIÓN SIN FUNCIÓN:
+"La división de 6 entre 2, dá: " 6/2
+
+;DIVISIÓN CON FUNCIÓN:
+"La división de 9 entre 3, dá: " (/ 9 3)
+
+;MULTIPLICACIÓN:
+"La multiplicación de 5 por 2, dá: " (* 5 2)
+
+;Para sumar el total de 2 longitudes de strings:
+"La suma de la longitud de 'Hola Yo' y de 'Hola Mundo', es de: "
+(+ (string-length (string-append "HOLA" " YO")) (string-length (string-append "HOLA" " MUNDO")))
+
