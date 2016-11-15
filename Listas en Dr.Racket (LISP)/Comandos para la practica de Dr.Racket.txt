@@ -1,0 +1,57 @@
+Aqui tenemos los comandos para alimentar el arbol y su lista
+
+> (define t1(make-bt 2 vacio-bt vacio-bt))
+> (define t2(make-bt 7 vacio-bt vacio-bt))
+> (define t3(make-bt '* t1 t2))
+> (define t4(make-bt 5 vacio-bt vacio-bt))
+> (define t5(make-bt '+ t4 t3))
+
+-Luego tenemos el comando que le decimos devuelva el parametro que le enviamos en una lista
+
+> (to-list-bt t5)
+
+-Esto nos devuelve la lista de los parametros en el arbol
+
+-------------------------------
+
+-Otros datos para el orden de los arboles
+
+> (define t1(make-bt 2 vacio-bt vacio-bt))
+> (define t2(make-bt 10 vacio-bt vacio-bt))
+> (define t3(make-bt 8 t1 t2))
+> (define t4(make-bt 14 vacio-bt vacio-bt))
+> (define t5(make-bt 12 t3 t4))
+
+-Para agregar o insertar nodos en orden el el arbol usamos
+para alimentar el arbol:
+
+> (define t1(make-bt 2 vacio-bt vacio-bt))
+> (define t2(make-bt 10 vacio-bt vacio-bt))
+> (define t3(make-bt 8 t1 t2))
+> (define t4(make-bt 14 vacio-bt vacio-bt))
+> (define t5(make-bt 12 t3 t4))
+
+-Ahora para consultar se envia la peticion:
+ejemplo:
+t5 esto nos devuelve la lista en el nodo t5
+
+-para insertar en el arbol ya con el metodo de ordenar es:
+(define t6 (insertar-bt 11 t5))   --aqui le decimos que lo inserta luego del nodo t5, osea
+inserta el nodo t6 con el numero 11 y el metodo lo ordena
+
+y para comprobar el orden le decimos enviemelo en una lista asi:
+
+-(to-list-bt t6) o con cualquier arbol si quiere convertirlo en lista
+el me devuelve el orden del arbol en una lista
+
+-Para el factorial solo es enviar el metodo mas el numero a calcular
+(factorial 5)
+
+-Sumar listas
+(sumarLista nombre_de_la_lista)
+(sumarLista listaA)
+
+o tambien asi: 
+(+ (sumarLista listaA) (sumarLista listaB))
+
+
