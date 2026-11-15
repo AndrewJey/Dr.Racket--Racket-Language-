@@ -13,3 +13,11 @@ Revisa los scripts de esquema y crea una base de datos de prueba separada. SSMS 
 
 `.gitignore` excluye credenciales locales, estado del editor y salidas de las herramientas detectadas. No deja de versionar archivos que ya estaban en Git. Los manifiestos, archivos de bloqueo, recursos fuente y scripts de esquema forman parte del código.
 <!-- local-development:end -->
+
+<!-- platform-tools:start -->
+## Herramientas para otros componentes
+
+### Racket / Scheme
+
+Abre los fuentes en DrRacket y selecciona el lenguaje que declara cada archivo. Para código Scheme sin `#lang`, usa la implementación indicada en el material original. La compatibilidad de esos dialectos requiere su propia prueba.
+<!-- platform-tools:end -->
