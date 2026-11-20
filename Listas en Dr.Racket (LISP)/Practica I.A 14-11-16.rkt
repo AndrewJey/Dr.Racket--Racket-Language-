@@ -22,10 +22,10 @@
 
 ;Consulta si elos nodos son vacios
 (define (hoja-bt? btree)
-  ;y si es vacio el izq de la lista
-  (and (vacio-bt (izq-bt btree))
-       ; o el derecho de la lista
-       (vacio-bt (der-bt btree))))
+  ;y si es vacio el izq y el derecho del arbol
+  (and (not (vacio-bt? btree))
+       (vacio-bt? (izq-bt btree))
+       (vacio-bt? (der-bt btree))))
 
 ;OPERADORES metodos
 (define (to-list-bt btree)
@@ -51,7 +51,7 @@
               (izq-bt bt) ;inserte en derecho y enlace izquierdo
               (insertar-bt x (der-bt bt))))
     ;cond 4
-    ((= x (dato-bt bt) bt)))) ;si ya esta solo devuelva el valor no agregue
+    ((= x (dato-bt bt)) bt))) ;si ya esta solo devuelva el valor no agregue
 
 
 #|
@@ -67,7 +67,7 @@
 
 ;Factorial
 (define (factorial x)
-  (if(= x 0) 1(* x (factorial (- x 1)))))
+  (if (<= x 0) 1 (* x (factorial (- x 1)))))
 
 ;Metodo para sumar listas
 

@@ -21,3 +21,11 @@ Revisa los scripts de esquema y crea una base de datos de prueba separada. SSMS 
 
 Abre los fuentes en DrRacket y selecciona el lenguaje que declara cada archivo. Para código Scheme sin `#lang`, usa la implementación indicada en el material original. La compatibilidad de esos dialectos requiere su propia prueba.
 <!-- platform-tools:end -->
+
+
+<!-- improvements-20261119:start -->
+## Mejoras y verificación — 2026-11-19 (Corrección de errores en tiempo de ejecución en Árbol Binario y Factorial (Racket))
+
+- **Cambios:** Corregida llamada a constante `'()` en lugar del predicado `vacio-bt?` en `hoja-bt?`, reparada la cláusula `((= x (dato-bt bt)) bt)` en `insertar-bt` que pasaba la lista como argumento numérico a `=`, y añadida guarda `(<= x 0)` en `factorial`.
+- **Validación:** Validador de S-expresiones y auditoría de sintaxis en 8/8 archivos `.rkt` (paréntesis balanceados y 0 errores `vacio-bt`/`insertar-bt`).
+<!-- improvements-20261119:end -->
